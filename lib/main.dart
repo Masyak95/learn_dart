@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'MyBody.dart';
 
-void main(){
-  runApp (const MyApp());
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,15 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.green[300]),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Hi Flutter!'),
+          title: const Text('WordPair Generator'),
         ),
-        body: const Center(
-          child: Text('welcome to Flutter.'),
-        ),
+        body: const MyBody(),
       ),
     );
   }
 }
-
