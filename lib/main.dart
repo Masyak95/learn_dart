@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'MyBody.dart';
+import 'package:wordpair_generator/utils/generateMaterialColor.dart';
+import 'package:wordpair_generator/utils/customTheme.dart';
+import 'package:wordpair_generator/random_words.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -11,13 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.green[300]),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('WordPair Generator'),
-        ),
-        body: const MyBody(),
-      ),
-    );
+        theme: ThemeData(
+            primarySwatch: generateMaterialColor(Palette.primaryColor)),
+        home: RandomWords());
   }
 }
